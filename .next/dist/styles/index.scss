@@ -1,0 +1,7 @@
+;
+
+(function () {
+  "use strict";
+
+  module.exports = "p {\n  background: red;\n  color: white;\n  padding: 10px;\n  margin: 0;\n  line-height: 50px;\n  height: 50px;\n  text-align: center;\n  font-family: \"arial\";\n  font-size: 25px;\n  font-weight: bold;\n  border-radius: 10px; }\n";
+})();
