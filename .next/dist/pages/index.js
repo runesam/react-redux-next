@@ -4,9 +4,41 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
+var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');
+
+var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
+
+var _classCallCheck2 = require('babel-runtime/helpers/classCallCheck');
+
+var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);
+
+var _createClass2 = require('babel-runtime/helpers/createClass');
+
+var _createClass3 = _interopRequireDefault(_createClass2);
+
+var _possibleConstructorReturn2 = require('babel-runtime/helpers/possibleConstructorReturn');
+
+var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);
+
+var _inherits2 = require('babel-runtime/helpers/inherits');
+
+var _inherits3 = _interopRequireDefault(_inherits2);
+
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
+
+var _reactRedux = require('react-redux');
+
+var _redux = require('redux');
+
+var _booksList = require('./../containers/books-list');
+
+var _booksList2 = _interopRequireDefault(_booksList);
+
+var _reducers = require('./../reducers');
+
+var _reducers2 = _interopRequireDefault(_reducers);
 
 var _index = require('../styles/index.scss');
 
@@ -16,21 +48,47 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var _jsxFileName = 'C:\\workspace\\react-redux-next\\pages\\index.js?entry';
 
-exports.default = function () {
-    return _react2.default.createElement('div', {
-        __source: {
-            fileName: _jsxFileName,
-            lineNumber: 6
+
+var Home = function (_Component) {
+    (0, _inherits3.default)(Home, _Component);
+
+    function Home() {
+        (0, _classCallCheck3.default)(this, Home);
+
+        return (0, _possibleConstructorReturn3.default)(this, (Home.__proto__ || (0, _getPrototypeOf2.default)(Home)).apply(this, arguments));
+    }
+
+    (0, _createClass3.default)(Home, [{
+        key: 'componentWillMount',
+        value: function componentWillMount() {
+            this.store = (0, _redux.createStore)(_reducers2.default);
         }
-    }, _react2.default.createElement('style', { dangerouslySetInnerHTML: { __html: _index2.default }, __source: {
-            fileName: _jsxFileName,
-            lineNumber: 7
+    }, {
+        key: 'render',
+        value: function render() {
+            return _react2.default.createElement('div', { className: 'home_page', __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 16
+                }
+            }, _react2.default.createElement('style', { dangerouslySetInnerHTML: { __html: _index2.default }, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 17
+                }
+            }), 'home page we are', _react2.default.createElement(_reactRedux.Provider, { store: this.store, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 19
+                }
+            }, _react2.default.createElement(_booksList2.default, {
+                __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 20
+                }
+            })));
         }
-    }), _react2.default.createElement('p', {
-        __source: {
-            fileName: _jsxFileName,
-            lineNumber: 8
-        }
-    }, 'Welcome to next.js!'));
-};
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzXFxpbmRleC5qcyJdLCJuYW1lcyI6WyJSZWFjdCIsInN0eWxlc2hlZXQiLCJfX2h0bWwiXSwibWFwcGluZ3MiOiI7Ozs7OztBQUFBLEFBQU87Ozs7QUFFUCxBQUFPLEFBQWdCLEFBRXZCOzs7Ozs7OztrQkFBZSxZQUFBOzJCQUNYLGNBQUE7O3NCQUFBO3dCQUFBLEFBQ0k7QUFESjtBQUFBLEtBQUEsMkNBQ1cseUJBQXlCLEVBQWhDLEFBQWdDLEFBQUUsQUFBUTtzQkFBMUM7d0JBREosQUFDSSxBQUNBO0FBREE7d0JBQ0EsY0FBQTs7c0JBQUE7d0JBQUE7QUFBQTtBQUFBLE9BSE8sQUFDWCxBQUVJO0FBSFIiLCJmaWxlIjoiaW5kZXguanM/ZW50cnkiLCJzb3VyY2VSb290IjoiQzovd29ya3NwYWNlL3JlYWN0LXJlZHV4LW5leHQifQ==
+    }]);
+
+    return Home;
+}(_react.Component);
+
+exports.default = Home;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzXFxpbmRleC5qcyJdLCJuYW1lcyI6WyJSZWFjdCIsIkNvbXBvbmVudCIsIlByb3ZpZGVyIiwiY3JlYXRlU3RvcmUiLCJCb29rc0xpc3QiLCJyZWR1Y2VyIiwic3R5bGVzaGVldCIsIkhvbWUiLCJzdG9yZSIsIl9faHRtbCJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQSxBQUFPLEFBQVM7Ozs7QUFDaEIsQUFBUzs7QUFDVCxBQUFTOztBQUVULEFBQU8sQUFBZTs7OztBQUN0QixBQUFPLEFBQWE7Ozs7QUFFcEIsQUFBTyxBQUFnQjs7Ozs7Ozs7O0ksQUFFakI7Ozs7Ozs7Ozs7OzZDQUNtQixBQUNqQjtpQkFBQSxBQUFLLFFBQUwsQUFBYSxBQUFZLEFBQzVCOzs7O2lDQUNRLEFBQ0w7bUNBQ0EsY0FBQSxTQUFLLFdBQUwsQUFBZTs4QkFBZjtnQ0FBQSxBQUNBO0FBREE7YUFBQSwyQ0FDTyx5QkFBeUIsRUFBaEMsQUFBZ0MsQUFBRSxBQUFROzhCQUExQztnQ0FEQSxBQUNBO0FBQUE7Z0JBRUksb0NBQUEsQUFBQyxzQ0FBUyxPQUFPLEtBQWpCLEFBQXNCOzhCQUF0QjtnQ0FBQSxBQUNBO0FBREE7K0JBQ0EsQUFBQzs7OEJBQUQ7Z0NBTEosQUFDQSxBQUdJLEFBQ0EsQUFJUDtBQUpPO0FBQUE7Ozs7O0FBVk8sQSxBQWdCbkI7O2tCQUFBLEFBQWUiLCJmaWxlIjoiaW5kZXguanM/ZW50cnkiLCJzb3VyY2VSb290IjoiQzovd29ya3NwYWNlL3JlYWN0LXJlZHV4LW5leHQifQ==
