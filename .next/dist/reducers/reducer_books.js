@@ -4,8 +4,8 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 var reducerBooks = function reducerBooks() {
-    return [{ title: 'test1' }, { title: 'test2' }, { title: 'test3' }, { title: 'test4' }, { title: 'test5' }, { title: 'test6' }, { title: 'test7' }];
+    return [{ title: 'The Hunger Games', pages: 20 }, { title: 'To Kill a Mockingbird', pages: 80 }, { title: 'Pride and Prejudice', pages: 800 }, { title: 'Twilight (Twilight, #1)', pages: 158 }, { title: 'The Book Thief', pages: 856 }, { title: 'Animal Farm', pages: 55 }, { title: 'The Fault in Our Stars', pages: 99 }];
 };
 
 exports.default = reducerBooks;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInJlZHVjZXJzXFxyZWR1Y2VyX2Jvb2tzLmpzIl0sIm5hbWVzIjpbInJlZHVjZXJCb29rcyIsInRpdGxlIl0sIm1hcHBpbmdzIjoiOzs7OztBQUFBLElBQU0sZUFBZSxTQUFmLEFBQWUsZUFBQTtXQUFNLENBQ3ZCLEVBQUUsT0FBTyxBQUFULEFBRHVCLFdBRXZCLEVBQUUsT0FBTyxBQUFULEFBRnVCLFdBR3ZCLEVBQUUsT0FBTyxBQUFULEFBSHVCLFdBSXZCLEVBQUUsT0FBTyxBQUFULEFBSnVCLFdBS3ZCLEVBQUUsT0FBTyxBQUFULEFBTHVCLFdBTXZCLEVBQUUsT0FBTyxBQUFULEFBTnVCLFdBT3ZCLEVBQUUsT0FBTyxBQUFULEFBUHVCLEFBQU47QUFBckIsQUFVQTs7a0JBQWUsQUFBZiIsImZpbGUiOiJyZWR1Y2VyX2Jvb2tzLmpzIiwic291cmNlUm9vdCI6IkM6L3dvcmtzcGFjZS9yZWFjdC1yZWR1eC1uZXh0In0=
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInJlZHVjZXJzXFxyZWR1Y2VyX2Jvb2tzLmpzIl0sIm5hbWVzIjpbInJlZHVjZXJCb29rcyIsInRpdGxlIiwicGFnZXMiXSwibWFwcGluZ3MiOiI7Ozs7O0FBQUEsSUFBTSxlQUFlLFNBQWYsQUFBZSxlQUFBO1dBQU0sQ0FDdkIsRUFBRSxPQUFPLEFBQVQsb0JBQTZCLE9BQU8sQUFBcEMsQUFEdUIsTUFFdkIsRUFBRSxPQUFPLEFBQVQseUJBQWtDLE9BQU8sQUFBekMsQUFGdUIsTUFHdkIsRUFBRSxPQUFPLEFBQVQsdUJBQWdDLE9BQU8sQUFBdkMsQUFIdUIsT0FJdkIsRUFBRSxPQUFPLEFBQVQsMkJBQW9DLE9BQU8sQUFBM0MsQUFKdUIsT0FLdkIsRUFBRSxPQUFPLEFBQVQsa0JBQTJCLE9BQU8sQUFBbEMsQUFMdUIsT0FNdkIsRUFBRSxPQUFPLEFBQVQsZUFBd0IsT0FBTyxBQUEvQixBQU51QixNQU92QixFQUFFLE9BQU8sQUFBVCwwQkFBbUMsT0FBTyxBQUExQyxBQVB1QixBQUFOO0FBQXJCLEFBVUE7O2tCQUFlLEFBQWYiLCJmaWxlIjoicmVkdWNlcl9ib29rcy5qcyIsInNvdXJjZVJvb3QiOiJDOi93b3Jrc3BhY2UvcmVhY3QtcmVkdXgtbmV4dCJ9

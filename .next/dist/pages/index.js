@@ -36,6 +36,10 @@ var _booksList = require('./../containers/books-list');
 
 var _booksList2 = _interopRequireDefault(_booksList);
 
+var _bookDetail = require('./../containers/book-detail');
+
+var _bookDetail2 = _interopRequireDefault(_bookDetail);
+
 var _reducers = require('./../reducers');
 
 var _reducers2 = _interopRequireDefault(_reducers);
@@ -66,22 +70,27 @@ var Home = function (_Component) {
     }, {
         key: 'render',
         value: function render() {
-            return _react2.default.createElement('div', { className: 'home_page', __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 16
-                }
-            }, _react2.default.createElement('style', { dangerouslySetInnerHTML: { __html: _index2.default }, __source: {
+            return _react2.default.createElement(_reactRedux.Provider, { store: this.store, __source: {
                     fileName: _jsxFileName,
                     lineNumber: 17
                 }
-            }), 'home page we are', _react2.default.createElement(_reactRedux.Provider, { store: this.store, __source: {
+            }, _react2.default.createElement('div', { className: 'home_page', __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 18
+                }
+            }, _react2.default.createElement('style', { dangerouslySetInnerHTML: { __html: _index2.default }, __source: {
                     fileName: _jsxFileName,
                     lineNumber: 19
                 }
-            }, _react2.default.createElement(_booksList2.default, {
+            }), _react2.default.createElement(_booksList2.default, {
                 __source: {
                     fileName: _jsxFileName,
                     lineNumber: 20
+                }
+            }), _react2.default.createElement(_bookDetail2.default, {
+                __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 21
                 }
             })));
         }
@@ -91,4 +100,4 @@ var Home = function (_Component) {
 }(_react.Component);
 
 exports.default = Home;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzXFxpbmRleC5qcyJdLCJuYW1lcyI6WyJSZWFjdCIsIkNvbXBvbmVudCIsIlByb3ZpZGVyIiwiY3JlYXRlU3RvcmUiLCJCb29rc0xpc3QiLCJyZWR1Y2VyIiwic3R5bGVzaGVldCIsIkhvbWUiLCJzdG9yZSIsIl9faHRtbCJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQSxBQUFPLEFBQVM7Ozs7QUFDaEIsQUFBUzs7QUFDVCxBQUFTOztBQUVULEFBQU8sQUFBZTs7OztBQUN0QixBQUFPLEFBQWE7Ozs7QUFFcEIsQUFBTyxBQUFnQjs7Ozs7Ozs7O0ksQUFFakI7Ozs7Ozs7Ozs7OzZDQUNtQixBQUNqQjtpQkFBQSxBQUFLLFFBQUwsQUFBYSxBQUFZLEFBQzVCOzs7O2lDQUNRLEFBQ0w7bUNBQ0EsY0FBQSxTQUFLLFdBQUwsQUFBZTs4QkFBZjtnQ0FBQSxBQUNBO0FBREE7YUFBQSwyQ0FDTyx5QkFBeUIsRUFBaEMsQUFBZ0MsQUFBRSxBQUFROzhCQUExQztnQ0FEQSxBQUNBO0FBQUE7Z0JBRUksb0NBQUEsQUFBQyxzQ0FBUyxPQUFPLEtBQWpCLEFBQXNCOzhCQUF0QjtnQ0FBQSxBQUNBO0FBREE7K0JBQ0EsQUFBQzs7OEJBQUQ7Z0NBTEosQUFDQSxBQUdJLEFBQ0EsQUFJUDtBQUpPO0FBQUE7Ozs7O0FBVk8sQSxBQWdCbkI7O2tCQUFBLEFBQWUiLCJmaWxlIjoiaW5kZXguanM/ZW50cnkiLCJzb3VyY2VSb290IjoiQzovd29ya3NwYWNlL3JlYWN0LXJlZHV4LW5leHQifQ==
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzXFxpbmRleC5qcyJdLCJuYW1lcyI6WyJSZWFjdCIsIkNvbXBvbmVudCIsIlByb3ZpZGVyIiwiY3JlYXRlU3RvcmUiLCJCb29rc0xpc3QiLCJCb29rRGV0YWlsIiwicmVkdWNlciIsInN0eWxlc2hlZXQiLCJIb21lIiwic3RvcmUiLCJfX2h0bWwiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUEsQUFBTyxBQUFTOzs7O0FBQ2hCLEFBQVM7O0FBQ1QsQUFBUzs7QUFFVCxBQUFPLEFBQWU7Ozs7QUFDdEIsQUFBTyxBQUFnQjs7OztBQUN2QixBQUFPLEFBQWE7Ozs7QUFFcEIsQUFBTyxBQUFnQjs7Ozs7Ozs7O0ksQUFFakI7Ozs7Ozs7Ozs7OzZDQUNtQixBQUNqQjtpQkFBQSxBQUFLLFFBQUwsQUFBYSxBQUFZLEFBQzVCOzs7O2lDQUNRLEFBQ0w7bUNBQ0ksQUFBQyxzQ0FBUyxPQUFPLEtBQWpCLEFBQXNCOzhCQUF0QjtnQ0FBQSxBQUNJO0FBREo7YUFBQSxrQkFDSSxjQUFBLFNBQUssV0FBTCxBQUFlOzhCQUFmO2dDQUFBLEFBQ0k7QUFESjt3REFDVyx5QkFBeUIsRUFBaEMsQUFBZ0MsQUFBRSxBQUFROzhCQUExQztnQ0FESixBQUNJLEFBQ0E7QUFEQTtnQ0FDQSxBQUFDOzs4QkFBRDtnQ0FGSixBQUVJLEFBQ0E7QUFEQTtBQUFBLGdDQUNBLEFBQUM7OzhCQUFEO2dDQUxaLEFBQ0ksQUFDSSxBQUdJLEFBSWY7QUFKZTtBQUFBOzs7OztBQVZELEEsQUFnQm5COztrQkFBQSxBQUFlIiwiZmlsZSI6ImluZGV4LmpzP2VudHJ5Iiwic291cmNlUm9vdCI6IkM6L3dvcmtzcGFjZS9yZWFjdC1yZWR1eC1uZXh0In0=
