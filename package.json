@@ -22,22 +22,25 @@
     "autoprefixer": "6.7.6",
     "babel-plugin-module-resolver": "2.5.0",
     "babel-plugin-wrap-in-js": "^1.1.0",
+    "glob": "7.1.1",
+    "jquery": "^3.2.1",
+    "micro": "latest",
     "next": "^4.1.2",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
-    "react-transition-group": "^1.2.0",
-    "reactstrap": "^4.8.0",
-    "sass-loader": "^4.1.1",
     "node-sass": "^4.4.0",
     "normalize.css": "5.0.0",
     "postcss-easy-import": "2.0.0",
     "postcss-loader": "1.3.3",
     "raw-loader": "^0.5.1",
-    "glob": "7.1.1",
-    "jquery": "^3.2.1",
-    "micro": "latest"
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-redux": "^5.0.6",
+    "react-transition-group": "^1.2.0",
+    "reactstrap": "^4.8.0",
+    "redux": "^3.7.2",
+    "sass-loader": "^4.1.1"
   },
   "devDependencies": {
-    "eslint-config-rallycoding": "^3.2.0"
+    "eslint-config-rallycoding": "^3.2.0",
+    "redux-devtools": "^3.4.0"
   }
 }
