@@ -13,7 +13,7 @@ function selectBook(book) {
 }
 
 function fetchWeather(city) {
-    const url = `${ROOT_URL}&q=${city},us`;
+    const url = `${ROOT_URL}&q=${city}`;
     const request = axios.get(url);
     return {
         type: FETCH_WEATHER,

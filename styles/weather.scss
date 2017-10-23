@@ -37,6 +37,24 @@ body {
             thead * {
                 font-size: 20px; 
             }
+            tbody {
+                td {
+                    font-weight: 600;                    
+                    vertical-align: middle;
+                    .chart-container {
+                        svg {
+                            height: 200px;
+                        }
+                        height: 230px;
+                        overflow: hidden;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        .google-map-loader-container {
+            height: 200px;
+            width: 200px;
         }
     }
 }
