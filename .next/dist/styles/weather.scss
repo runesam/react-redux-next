@@ -1,0 +1,7 @@
+;
+
+(function () {
+  "use strict";
+
+  module.exports = "body {\n  margin: 0;\n  font-family: Arial, Helvetica, sans-serif; }\n  body div.weather-app {\n    margin: 20px;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-align: center;\n        -ms-flex-align: center;\n            align-items: center;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n        -ms-flex-direction: column;\n            flex-direction: column; }\n  body div.weather-app .search-form {\n      display: block;\n      width: 90%; }\n  body div.weather-app .search-form input {\n        outline: 0;\n        width: 80%;\n        line-height: 50px;\n        height: 50px;\n        border-radius: 10px 0 0 10px;\n        border: 1px solid gray;\n        font-size: 20px;\n        padding: 0 15px;\n        float: left; }\n  body div.weather-app .search-form button {\n        width: 20%;\n        outline: 0;\n        border: 0;\n        line-height: 50px;\n        height: 50px;\n        border-radius: 0 10px 10px 0;\n        border: 1px solid gray;\n        font-size: 20px;\n        border-left: 0; }\n  body div.weather-app table {\n      width: 90%; }\n  body div.weather-app table thead * {\n        font-size: 20px; }\n";
+})();

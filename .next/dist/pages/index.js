@@ -28,21 +28,9 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactRedux = require('react-redux');
+var _link = require('next\\dist\\lib\\link.js');
 
-var _redux = require('redux');
-
-var _booksList = require('./../containers/books-list');
-
-var _booksList2 = _interopRequireDefault(_booksList);
-
-var _bookDetail = require('./../containers/book-detail');
-
-var _bookDetail2 = _interopRequireDefault(_bookDetail);
-
-var _reducers = require('./../reducers');
-
-var _reducers2 = _interopRequireDefault(_reducers);
+var _link2 = _interopRequireDefault(_link);
 
 var _index = require('../styles/index.scss');
 
@@ -63,36 +51,33 @@ var Home = function (_Component) {
     }
 
     (0, _createClass3.default)(Home, [{
-        key: 'componentWillMount',
-        value: function componentWillMount() {
-            this.store = (0, _redux.createStore)(_reducers2.default);
-        }
-    }, {
         key: 'render',
         value: function render() {
-            return _react2.default.createElement(_reactRedux.Provider, { store: this.store, __source: {
+            return _react2.default.createElement('div', { className: 'home_page', __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 17
-                }
-            }, _react2.default.createElement('div', { className: 'home_page', __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 18
+                    lineNumber: 9
                 }
             }, _react2.default.createElement('style', { dangerouslySetInnerHTML: { __html: _index2.default }, __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 19
+                    lineNumber: 10
                 }
-            }), _react2.default.createElement(_booksList2.default, {
-                __source: {
+            }), _react2.default.createElement(_link2.default, { href: '/dummy', __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 20
+                    lineNumber: 11
                 }
-            }), _react2.default.createElement(_bookDetail2.default, {
-                __source: {
+            }, _react2.default.createElement('a', { className: 'link', __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 21
+                    lineNumber: 12
                 }
-            })));
+            }, 'Dummy Application')), _react2.default.createElement(_link2.default, { href: '/weather', __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 14
+                }
+            }, _react2.default.createElement('a', { className: 'link', __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 15
+                }
+            }, 'Weather Application')));
         }
     }]);
 
@@ -100,4 +85,4 @@ var Home = function (_Component) {
 }(_react.Component);
 
 exports.default = Home;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzXFxpbmRleC5qcyJdLCJuYW1lcyI6WyJSZWFjdCIsIkNvbXBvbmVudCIsIlByb3ZpZGVyIiwiY3JlYXRlU3RvcmUiLCJCb29rc0xpc3QiLCJCb29rRGV0YWlsIiwicmVkdWNlciIsInN0eWxlc2hlZXQiLCJIb21lIiwic3RvcmUiLCJfX2h0bWwiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUEsQUFBTyxBQUFTOzs7O0FBQ2hCLEFBQVM7O0FBQ1QsQUFBUzs7QUFFVCxBQUFPLEFBQWU7Ozs7QUFDdEIsQUFBTyxBQUFnQjs7OztBQUN2QixBQUFPLEFBQWE7Ozs7QUFFcEIsQUFBTyxBQUFnQjs7Ozs7Ozs7O0ksQUFFakI7Ozs7Ozs7Ozs7OzZDQUNtQixBQUNqQjtpQkFBQSxBQUFLLFFBQUwsQUFBYSxBQUFZLEFBQzVCOzs7O2lDQUNRLEFBQ0w7bUNBQ0ksQUFBQyxzQ0FBUyxPQUFPLEtBQWpCLEFBQXNCOzhCQUF0QjtnQ0FBQSxBQUNJO0FBREo7YUFBQSxrQkFDSSxjQUFBLFNBQUssV0FBTCxBQUFlOzhCQUFmO2dDQUFBLEFBQ0k7QUFESjt3REFDVyx5QkFBeUIsRUFBaEMsQUFBZ0MsQUFBRSxBQUFROzhCQUExQztnQ0FESixBQUNJLEFBQ0E7QUFEQTtnQ0FDQSxBQUFDOzs4QkFBRDtnQ0FGSixBQUVJLEFBQ0E7QUFEQTtBQUFBLGdDQUNBLEFBQUM7OzhCQUFEO2dDQUxaLEFBQ0ksQUFDSSxBQUdJLEFBSWY7QUFKZTtBQUFBOzs7OztBQVZELEEsQUFnQm5COztrQkFBQSxBQUFlIiwiZmlsZSI6ImluZGV4LmpzP2VudHJ5Iiwic291cmNlUm9vdCI6IkM6L3dvcmtzcGFjZS9yZWFjdC1yZWR1eC1uZXh0In0=
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzXFxpbmRleC5qcyJdLCJuYW1lcyI6WyJSZWFjdCIsIkNvbXBvbmVudCIsIkxpbmsiLCJzdHlsZXNoZWV0IiwiSG9tZSIsIl9faHRtbCJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQSxBQUFPLEFBQVM7Ozs7QUFDaEIsQUFBTzs7OztBQUVQLEFBQU8sQUFBZ0I7Ozs7Ozs7OztJQUVqQixBOzs7Ozs7Ozs7OztpQ0FDTyxBQUNMO21DQUNJLGNBQUEsU0FBSyxXQUFMLEFBQWU7OEJBQWY7Z0NBQUEsQUFDSTtBQURKO2FBQUEsMkNBQ1cseUJBQXlCLEVBQWhDLEFBQWdDLEFBQUUsQUFBUTs4QkFBMUM7Z0NBREosQUFDSSxBQUNBO0FBREE7Z0NBQ0EsQUFBQyxnQ0FBSyxNQUFOLEFBQVc7OEJBQVg7Z0NBQUEsQUFDSTtBQURKOytCQUNJLGNBQUEsT0FBRyxXQUFILEFBQWE7OEJBQWI7Z0NBQUE7QUFBQTtlQUhSLEFBRUksQUFDSSxBQUVKLHVDQUFBLEFBQUMsZ0NBQUssTUFBTixBQUFXOzhCQUFYO2dDQUFBLEFBQ0k7QUFESjsrQkFDSSxjQUFBLE9BQUcsV0FBSCxBQUFhOzhCQUFiO2dDQUFBO0FBQUE7ZUFQWixBQUNJLEFBS0ksQUFDSSxBQUlmOzs7OztBQWJjLEEsQUFlbkI7O2tCQUFBLEFBQWUiLCJmaWxlIjoiaW5kZXguanM/ZW50cnkiLCJzb3VyY2VSb290IjoiQzovd29ya3NwYWNlL3JlYWN0LXJlZHV4LW5leHQifQ==

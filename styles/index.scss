@@ -1,30 +1,27 @@
-div.list-group {
-    width: 300px;
-    button {
-        width: 100%;
-        padding: 10px;
-        float: left;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 20px;
-        background: yellowgreen;
-        border: 0;
-        outline: 0;
-        margin-bottom: 5px;
-        color: white;
-        &:hover {
-            background: green;
-            cursor: pointer;
+body { 
+    margin: 0;
+    div.home_page {
+        background: #212121;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        a {
+            flex: 1;
+            margin: 0 50px;
+            background: #b90000;
+            padding: 20px;
+            float: left;
+            max-height: 150px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 25px;
+            text-decoration: none;
+            line-height: 150px;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: yellow;
+            border-radius: 20px;
         }
     }
-}
-div.book-detail {
-    background: red;
-    float: left;
-    width: 90%;
-    border-radius: 10px;
-    padding: 10px;
-    text-align: center;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 25px;
-    color: white;
 }
