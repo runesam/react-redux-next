@@ -32,6 +32,14 @@ var _reactRedux = require('react-redux');
 
 var _redux = require('redux');
 
+var _reduxPromise = require('redux-promise');
+
+var _reduxPromise2 = _interopRequireDefault(_reduxPromise);
+
+var _posts_index = require('./../components/posts_index');
+
+var _posts_index2 = _interopRequireDefault(_posts_index);
+
 var _reducers = require('./../reducers');
 
 var _reducers2 = _interopRequireDefault(_reducers);
@@ -43,9 +51,6 @@ var _blogger2 = _interopRequireDefault(_blogger);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var _jsxFileName = 'C:\\workspace\\react-redux-next\\pages\\blogger.js?entry';
-
-// import BooksList from './../containers/books-list';
-// import BookDetail from './../containers/book-detail';
 
 
 var Blogger = function (_Component) {
@@ -60,23 +65,28 @@ var Blogger = function (_Component) {
     (0, _createClass3.default)(Blogger, [{
         key: 'componentWillMount',
         value: function componentWillMount() {
-            this.store = (0, _redux.createStore)(_reducers2.default);
+            this.store = (0, _redux.applyMiddleware)(_reduxPromise2.default)(_redux.createStore);
             console.log(this.props);
         }
     }, {
         key: 'render',
         value: function render() {
-            return _react2.default.createElement(_reactRedux.Provider, { store: this.store, __source: {
-                    fileName: _jsxFileName,
-                    lineNumber: 18
-                }
-            }, _react2.default.createElement('div', { className: 'blogger-app', __source: {
+            return _react2.default.createElement(_reactRedux.Provider, { store: this.store(_reducers2.default), __source: {
                     fileName: _jsxFileName,
                     lineNumber: 19
                 }
-            }, _react2.default.createElement('style', { dangerouslySetInnerHTML: { __html: _blogger2.default }, __source: {
+            }, _react2.default.createElement('div', { className: 'blogger-app', __source: {
                     fileName: _jsxFileName,
                     lineNumber: 20
+                }
+            }, _react2.default.createElement('style', { dangerouslySetInnerHTML: { __html: _blogger2.default }, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 21
+                }
+            }), _react2.default.createElement(_posts_index2.default, {
+                __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 22
                 }
             })));
         }
@@ -86,4 +96,4 @@ var Blogger = function (_Component) {
 }(_react.Component);
 
 exports.default = Blogger;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzXFxibG9nZ2VyLmpzIl0sIm5hbWVzIjpbIlJlYWN0IiwiQ29tcG9uZW50IiwiUHJvdmlkZXIiLCJjcmVhdGVTdG9yZSIsInJlZHVjZXIiLCJzdHlsZXNoZWV0IiwiQmxvZ2dlciIsInN0b3JlIiwiY29uc29sZSIsImxvZyIsInByb3BzIiwiX19odG1sIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUFBLEFBQU8sQUFBUzs7OztBQUNoQixBQUFTOztBQUNULEFBQVM7O0FBSVQsQUFBTyxBQUFhOzs7O0FBRXBCLEFBQU8sQUFBZ0I7Ozs7Ozs7O0FBSnZCO0FBQ0E7OztJLEFBS007Ozs7Ozs7Ozs7OzZDQUNtQixBQUNqQjtpQkFBQSxBQUFLLFFBQUwsQUFBYSxBQUFZLEFBQ3pCO29CQUFBLEFBQVEsSUFBSSxLQUFaLEFBQWlCLEFBQ3BCOzs7O2lDQUNRLEFBQ0w7bUNBQ0ksQUFBQyxzQ0FBUyxPQUFPLEtBQWpCLEFBQXNCOzhCQUF0QjtnQ0FBQSxBQUNJO0FBREo7YUFBQSxrQkFDSSxjQUFBLFNBQUssV0FBTCxBQUFlOzhCQUFmO2dDQUFBLEFBQ0k7QUFESjt3REFDVyx5QkFBeUIsRUFBaEMsQUFBZ0MsQUFBRSxBQUFROzhCQUExQztnQ0FIWixBQUNJLEFBQ0ksQUFDSSxBQUtmO0FBTGU7Ozs7OztBQVRFLEEsQUFnQnRCOztrQkFBQSxBQUFlIiwiZmlsZSI6ImJsb2dnZXIuanM/ZW50cnkiLCJzb3VyY2VSb290IjoiQzovd29ya3NwYWNlL3JlYWN0LXJlZHV4LW5leHQifQ==
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzXFxibG9nZ2VyLmpzIl0sIm5hbWVzIjpbIlJlYWN0IiwiQ29tcG9uZW50IiwiUHJvdmlkZXIiLCJjcmVhdGVTdG9yZSIsImFwcGx5TWlkZGxld2FyZSIsInByb21pc2UiLCJQb3N0c0luZGV4IiwicmVkdWNlciIsInN0eWxlc2hlZXQiLCJCbG9nZ2VyIiwic3RvcmUiLCJjb25zb2xlIiwibG9nIiwicHJvcHMiLCJfX2h0bWwiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUEsQUFBTyxBQUFTOzs7O0FBQ2hCLEFBQVM7O0FBQ1QsQUFBUyxBQUFhOztBQUN0QixBQUFPOzs7O0FBRVAsQUFBTyxBQUFnQjs7OztBQUV2QixBQUFPLEFBQWE7Ozs7QUFFcEIsQUFBTyxBQUFnQjs7Ozs7Ozs7O0ksQUFFakI7Ozs7Ozs7Ozs7OzZDQUNtQixBQUNqQjtpQkFBQSxBQUFLLFFBQUwsQUFBYSxBQUFnQixBQUFTLEFBQ3RDO29CQUFBLEFBQVEsSUFBSSxLQUFaLEFBQWlCLEFBQ3BCOzs7O2lDQUNRLEFBQ0w7bUNBQ0ksQUFBQyxzQ0FBUyxPQUFPLEtBQWpCLEFBQWlCLEFBQUssQUFBTTs4QkFBNUI7Z0NBQUEsQUFDSTtBQURKO2FBQUEsa0JBQ0ksY0FBQSxTQUFLLFdBQUwsQUFBZTs4QkFBZjtnQ0FBQSxBQUNJO0FBREo7d0RBQ1cseUJBQXlCLEVBQWhDLEFBQWdDLEFBQUUsQUFBUTs4QkFBMUM7Z0NBREosQUFDSSxBQUNBO0FBREE7Z0NBQ0EsQUFBQzs7OEJBQUQ7Z0NBSlosQUFDSSxBQUNJLEFBRUksQUFJZjtBQUplO0FBQUE7Ozs7O0FBVkUsQSxBQWdCdEI7O2tCQUFBLEFBQWUiLCJmaWxlIjoiYmxvZ2dlci5qcz9lbnRyeSIsInNvdXJjZVJvb3QiOiJDOi93b3Jrc3BhY2UvcmVhY3QtcmVkdXgtbmV4dCJ9
