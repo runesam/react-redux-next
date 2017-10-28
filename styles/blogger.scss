@@ -3,5 +3,14 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     div.blogger-app {
        margin: 20px;
+       .form-group {
+           h5 {
+               text-transform: capitalize;
+           }
+           span {
+               color: #a30000;
+               font-weight: 500;
+           }
+       }
     }
 }

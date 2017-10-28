@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { reduxForm, Field } from 'redux-form';
+
 import { createPost } from '../actions/index';
+import FormFeild from './form_field';
 
 class PostsNew extends Component {
     render() {
@@ -9,18 +11,9 @@ class PostsNew extends Component {
         return (
             <form onSubmit={handleSubmit(this.props.createPost)}>
                 <h3>Create A new Post</h3>
-                <div className='form-froup'>
-                    <h5>Title</h5>
-                    <Field name={fields[0]} component='input' type='text' className='form-control' />
-                </div>
-                <div className='form-froup'>
-                    <h5>categories</h5>
-                    <Field name={fields[1]} component='input' type='text' className='form-control' />                    
-                </div>
-                <div className='form-froup'>
-                    <h5>content</h5>
-                    <Field name={fields[2]} component='textarea' type='text' className='form-control' />                    
-                </div>
+                <Field name={fields[0]} type='text' component={FormFeild} label={fields[0]} element='input' />
+                <Field name={fields[1]} type='text' component={FormFeild} label={fields[1]} element='input' />
+                <Field name={fields[2]} component={FormFeild} label={fields[2]} element='textarea' />
                 <br />
                 <button type='submit' className='btn btn-primary'>Submit</button>
             </form>
@@ -28,4 +21,15 @@ class PostsNew extends Component {
     }
 }
 
-export default connect(null, { createPost })(reduxForm({ form: 'PostNew', fields: ['title', 'categories', 'content'] })(PostsNew));
+const fields = ['title', 'categories', 'content'];
+function validate(values) {
+    const errors = {};    
+    fields.forEach(field => {
+        if (!values[field]) {
+            errors[field] = 'This Field is Required';
+        }
+    });
+    return errors;
+}
+
+export default connect(null, { createPost })(reduxForm({ form: 'PostNew', fields, validate })(PostsNew));

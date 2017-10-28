@@ -3,5 +3,5 @@
 (function () {
   "use strict";
 
-  module.exports = "body {\n  margin: 0;\n  font-family: Arial, Helvetica, sans-serif; }\n  body div.blogger-app {\n    margin: 20px; }\n";
+  module.exports = "body {\n  margin: 0;\n  font-family: Arial, Helvetica, sans-serif; }\n  body div.blogger-app {\n    margin: 20px; }\n  body div.blogger-app .form-group h5 {\n      text-transform: capitalize; }\n  body div.blogger-app .form-group span {\n      color: #a30000;\n      font-weight: 500; }\n";
 })();
