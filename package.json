@@ -42,6 +42,7 @@
     "reactstrap": "^4.8.0",
     "recompose": "^0.26.0",
     "redux": "^3.7.2",
+    "redux-form": "^7.1.2",
     "redux-promise": "^0.5.3",
     "sass-loader": "^4.1.1"
   },

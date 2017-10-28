@@ -24,7 +24,9 @@ function fetchWeather(city) {
 /* blogger stuff*/
 const PostsURL = 'http://reduxblog.herokuapp.com/api';
 const PostsKey = '?key=runesam';
+
 const FETCH_POSTS = 'FETCH_POSTS';
+const CREATE_POST = 'CREATE_POST';
 
 function fetchPosts() {
     const request = axios.get(`${PostsURL}/posts${PostsKey}`);
@@ -34,7 +36,15 @@ function fetchPosts() {
     };
 }
 
+function createPost(data) {
+    const request = axios.post(`${PostsURL}/posts${PostsKey}`, data);
+    return {
+        type: CREATE_POST,
+        payload: request
+    };
+}
+
 export {
-    FETCH_WEATHER, FETCH_POSTS,
-    selectBook, fetchWeather, fetchPosts
+    FETCH_WEATHER, FETCH_POSTS, CREATE_POST,
+    selectBook, fetchWeather, fetchPosts, createPost
 };
