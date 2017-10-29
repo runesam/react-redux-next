@@ -19,7 +19,6 @@ class Blogger extends Component {
     }
     componentWillMount() {
         this.store = applyMiddleware(promise)(createStore);
-        console.log(this.props);
     }
     renderNestedComponent() {
         switch (this.props.url.query.route) {

@@ -82,7 +82,6 @@ var Blogger = function (_Component) {
         key: 'componentWillMount',
         value: function componentWillMount() {
             this.store = (0, _redux.applyMiddleware)(_reduxPromise2.default)(_redux.createStore);
-            console.log(this.props);
         }
     }, {
         key: 'renderNestedComponent',
@@ -92,14 +91,14 @@ var Blogger = function (_Component) {
                     return _react2.default.createElement(_posts_new2.default, {
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 26
+                            lineNumber: 25
                         }
                     });
                 default:
                     return _react2.default.createElement(_posts_index2.default, {
                         __source: {
                             fileName: _jsxFileName,
-                            lineNumber: 27
+                            lineNumber: 26
                         }
                     });
             }
@@ -109,20 +108,20 @@ var Blogger = function (_Component) {
         value: function render() {
             return _react2.default.createElement(_reactRedux.Provider, { store: this.store(_reducers2.default), __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 32
+                    lineNumber: 31
                 }
             }, _react2.default.createElement('div', { className: 'blogger-app', __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 33
+                    lineNumber: 32
                 }
             }, _react2.default.createElement(_head2.default, {
                 __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 34
+                    lineNumber: 33
                 }
             }), _react2.default.createElement('style', { dangerouslySetInnerHTML: { __html: _blogger2.default }, __source: {
                     fileName: _jsxFileName,
-                    lineNumber: 35
+                    lineNumber: 34
                 }
             }), this.renderNestedComponent()));
         }
@@ -159,4 +158,4 @@ var Blogger = function (_Component) {
 }(_react.Component);
 
 exports.default = Blogger;
-//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzXFxibG9nZ2VyLmpzIl0sIm5hbWVzIjpbIlJlYWN0IiwiQ29tcG9uZW50IiwiUHJvdmlkZXIiLCJjcmVhdGVTdG9yZSIsImFwcGx5TWlkZGxld2FyZSIsInByb21pc2UiLCJIZWFkZXIiLCJQb3N0c0luZGV4IiwiUG9zdHNOZXciLCJyZWR1Y2VyIiwic3R5bGVzaGVldCIsIkJsb2dnZXIiLCJzdG9yZSIsImNvbnNvbGUiLCJsb2ciLCJwcm9wcyIsInVybCIsInF1ZXJ5Iiwicm91dGUiLCJfX2h0bWwiLCJyZW5kZXJOZXN0ZWRDb21wb25lbnQiLCJyZXEiLCJ1c2VyQWdlbnQiLCJoZWFkZXJzIiwibmF2aWdhdG9yIl0sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBQUEsQUFBTyxBQUFTOzs7O0FBQ2hCLEFBQVM7O0FBQ1QsQUFBUyxBQUFhOztBQUN0QixBQUFPOzs7O0FBRVAsQUFBTyxBQUFZOzs7O0FBRW5CLEFBQU8sQUFBZ0I7Ozs7QUFDdkIsQUFBTyxBQUFjOzs7O0FBRXJCLEFBQU8sQUFBYTs7OztBQUVwQixBQUFPLEFBQWdCOzs7Ozs7Ozs7SUFFakIsQTs7Ozs7Ozs7Ozs7NkNBS21CLEFBQ2pCO2lCQUFBLEFBQUssUUFBTCxBQUFhLEFBQWdCLEFBQVMsQUFDdEM7b0JBQUEsQUFBUSxJQUFJLEtBQVosQUFBaUIsQUFDcEI7Ozs7Z0RBQ3VCLEFBQ3BCO29CQUFRLEtBQUEsQUFBSyxNQUFMLEFBQVcsSUFBWCxBQUFlLE1BQXZCLEFBQTZCLEFBQ3pCO3FCQUFBLEFBQUssQUFBTzsyQ0FBTyxBQUFDOztzQ0FBRDt3Q0FBUCxBQUFPLEFBQ25CO0FBRG1CO0FBQUEscUJBQUE7QUFDVjsyQ0FBTyxBQUFDOztzQ0FBRDt3Q0FGcEIsQUFFYSxBQUFPLEFBRXZCO0FBRnVCO0FBQUEscUJBQUE7Ozs7O2lDQUdmLEFBQ0w7bUNBQ0ksQUFBQyxzQ0FBUyxPQUFPLEtBQWpCLEFBQWlCLEFBQUssQUFBTTs4QkFBNUI7Z0NBQUEsQUFDSTtBQURKO2FBQUEsa0JBQ0ksY0FBQSxTQUFLLFdBQUwsQUFBZTs4QkFBZjtnQ0FBQSxBQUNJO0FBREo7K0JBQ0ksQUFBQzs7OEJBQUQ7Z0NBREosQUFDSSxBQUNBO0FBREE7QUFBQSx5REFDTyx5QkFBeUIsRUFBaEMsQUFBZ0MsQUFBRSxBQUFROzhCQUExQztnQ0FGSixBQUVJLEFBQ0M7QUFERDtxQkFKWixBQUNJLEFBQ0ksQUFHSyxBQUFLLEFBSXJCOzs7Ozs7b0JBeEI4QixBLFdBQUEsQTs7Ozs7aUNBQ3JCO0EsNENBQVksTUFBTSxJQUFBLEFBQUksUUFBVixBQUFNLEFBQVksZ0JBQWdCLFVBQVUsQTtpRUFDdkQsRUFBRSxXQUFGLEE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFITyxBLEFBMkJ0Qjs7a0JBQUEsQUFBZSIsImZpbGUiOiJibG9nZ2VyLmpzP2VudHJ5Iiwic291cmNlUm9vdCI6IkM6L3dvcmtzcGFjZS9yZWFjdC1yZWR1eC1uZXh0In0=
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhZ2VzXFxibG9nZ2VyLmpzIl0sIm5hbWVzIjpbIlJlYWN0IiwiQ29tcG9uZW50IiwiUHJvdmlkZXIiLCJjcmVhdGVTdG9yZSIsImFwcGx5TWlkZGxld2FyZSIsInByb21pc2UiLCJIZWFkZXIiLCJQb3N0c0luZGV4IiwiUG9zdHNOZXciLCJyZWR1Y2VyIiwic3R5bGVzaGVldCIsIkJsb2dnZXIiLCJzdG9yZSIsInByb3BzIiwidXJsIiwicXVlcnkiLCJyb3V0ZSIsIl9faHRtbCIsInJlbmRlck5lc3RlZENvbXBvbmVudCIsInJlcSIsInVzZXJBZ2VudCIsImhlYWRlcnMiLCJuYXZpZ2F0b3IiXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFBQSxBQUFPLEFBQVM7Ozs7QUFDaEIsQUFBUzs7QUFDVCxBQUFTLEFBQWE7O0FBQ3RCLEFBQU87Ozs7QUFFUCxBQUFPLEFBQVk7Ozs7QUFFbkIsQUFBTyxBQUFnQjs7OztBQUN2QixBQUFPLEFBQWM7Ozs7QUFFckIsQUFBTyxBQUFhOzs7O0FBRXBCLEFBQU8sQUFBZ0I7Ozs7Ozs7OztJQUVqQixBOzs7Ozs7Ozs7Ozs2Q0FLbUIsQUFDakI7aUJBQUEsQUFBSyxRQUFMLEFBQWEsQUFBZ0IsQUFBUyxBQUN6Qzs7OztnREFDdUIsQUFDcEI7b0JBQVEsS0FBQSxBQUFLLE1BQUwsQUFBVyxJQUFYLEFBQWUsTUFBdkIsQUFBNkIsQUFDekI7cUJBQUEsQUFBSyxBQUFPOzJDQUFPLEFBQUM7O3NDQUFEO3dDQUFQLEFBQU8sQUFDbkI7QUFEbUI7QUFBQSxxQkFBQTtBQUNWOzJDQUFPLEFBQUM7O3NDQUFEO3dDQUZwQixBQUVhLEFBQU8sQUFFdkI7QUFGdUI7QUFBQSxxQkFBQTs7Ozs7aUNBR2YsQUFDTDttQ0FDSSxBQUFDLHNDQUFTLE9BQU8sS0FBakIsQUFBaUIsQUFBSyxBQUFNOzhCQUE1QjtnQ0FBQSxBQUNJO0FBREo7YUFBQSxrQkFDSSxjQUFBLFNBQUssV0FBTCxBQUFlOzhCQUFmO2dDQUFBLEFBQ0k7QUFESjsrQkFDSSxBQUFDOzs4QkFBRDtnQ0FESixBQUNJLEFBQ0E7QUFEQTtBQUFBLHlEQUNPLHlCQUF5QixFQUFoQyxBQUFnQyxBQUFFLEFBQVE7OEJBQTFDO2dDQUZKLEFBRUksQUFDQztBQUREO3FCQUpaLEFBQ0ksQUFDSSxBQUdLLEFBQUssQUFJckI7Ozs7OztvQkF2QjhCLEEsVyxBQUFBOzs7OztpQ0FDckI7QSw0Q0FBWSxNQUFNLElBQUEsQUFBSSxRQUFWLEFBQU0sQUFBWSxnQkFBZ0IsVSxBQUFVO2lFQUN2RCxFQUFFLFdBQUYsQTs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQUhPLEEsQUEwQnRCOztrQkFBQSxBQUFlIiwiZmlsZSI6ImJsb2dnZXIuanM/ZW50cnkiLCJzb3VyY2VSb290IjoiQzovd29ya3NwYWNlL3JlYWN0LXJlZHV4LW5leHQifQ==

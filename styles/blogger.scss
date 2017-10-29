@@ -1,16 +1,106 @@
+$main: red;
+$alternative: rgb(0, 162, 255);
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes rotate2 {
+    0% {
+        transform: rotate(0deg);
+        border-top-color: $main;
+    }
+    50% {
+        transform: rotate(180deg);
+        border-top-color: $alternative;
+    }
+    100% {
+        transform: rotate(360deg);
+        border-top-color: $main;
+    }
+}
+@mixin loaderDivMixin {
+    border-radius: 50%;
+    padding: 8px;
+    border: 2px solid transparent;
+    animation: rotate linear 3.5s infinite;
+}
+
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     div.blogger-app {
        margin: 20px;
-       .form-group {
-           h5 {
-               text-transform: capitalize;
-           }
-           span {
-               color: #a30000;
-               font-weight: 500;
-           }
-       }
+       .posts-list {
+           .list-group-item {
+                height: 55px;
+                .pull-xs-right {
+                    float: right;
+                    margin-right: 20px;
+                }
+                .btn {
+                    float: right;
+                    outline: 0;
+                    border: red;
+                    &:focus, &:hover {
+                        -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgb(255, 0, 0);
+                        box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgb(255, 0, 0);
+                    }
+                }
+            }
+            .loader {
+                position: relative;
+                margin: 75px auto;
+                width: 150px;
+                height: 150px;
+                display: block;
+                overflow: hidden;
+                will-change: transform;
+                & * {
+                    will-change: transform;
+                }
+                div {
+                    height: 100%;
+                    &:hover {
+                        animation-play-state: paused;
+                    }
+                }
+                &.loader1, &.loader1 div {
+                    @include loaderDivMixin;
+                    border-top-color: $main;
+                    border-bottom-color: $alternative;
+                }
+            }
+        }
+        .new-post {
+            .form-group {
+                h5 {
+                    text-transform: capitalize;
+                }
+                span {
+                    color: #a30000;
+                    font-weight: 500;
+                }
+                &.has-danger {
+                    .form-control {
+                        border: 1px solid #a30000;
+                        &:focus {
+                            -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgb(255, 0, 0);
+                            box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgb(255, 0, 0);
+                        }
+                    }
+                }
+            }
+            a.btn {
+                margin-left: 10px;
+            }
+        }
     }
 }
