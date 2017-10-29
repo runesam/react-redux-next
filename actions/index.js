@@ -27,6 +27,8 @@ const PostsKey = '?key=runesam';
 
 const FETCH_POSTS = 'FETCH_POSTS';
 const CREATE_POST = 'CREATE_POST';
+const FETCH_POST = 'FETCH_POST';
+const DELETE_POST = 'DELETE_POST';
 
 function fetchPosts() {
     const request = axios.get(`${PostsURL}/posts${PostsKey}`);
@@ -44,7 +46,23 @@ function createPost(data) {
     };
 }
 
+function fetchPost(id) {
+    const request = axios.get(`${PostsURL}/posts/${id}${PostsKey}`);
+    return {
+        type: FETCH_POST,
+        payload: request
+    };
+}
+
+function deletePost(id) {
+    const request = axios.delete(`${PostsURL}/posts/${id}${PostsKey}`);
+    return {
+        type: FETCH_POST,
+        payload: request
+    };
+}
+
 export {
-    FETCH_WEATHER, FETCH_POSTS, CREATE_POST,
-    selectBook, fetchWeather, fetchPosts, createPost
+    FETCH_WEATHER, FETCH_POSTS, CREATE_POST, FETCH_POST, DELETE_POST,
+    selectBook, fetchWeather, fetchPosts, createPost, fetchPost, deletePost
 };

@@ -4,9 +4,9 @@ import { createStore, applyMiddleware } from 'redux';
 import promise from 'redux-promise';
 
 import Header from './../components/head';
-
 import PostsIndex from './../components/posts_index';
 import PostsNew from './../components/posts_new';
+import PostDetail from './../components/post-detail';
 
 import reducer from './../reducers';
 
@@ -23,6 +23,7 @@ class Blogger extends Component {
     renderNestedComponent() {
         switch (this.props.url.query.route) {
             case 'new': return <PostsNew />;
+            case 'post': return this.props.url.query.id ? <PostDetail id={this.props.url.query.id} /> : <PostsIndex />; 
             default: return <PostsIndex />;
         }
     }

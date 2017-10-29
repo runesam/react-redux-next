@@ -15,7 +15,8 @@ app.prepare().then(() => {
 
   // use pages/post.js as /blogger/:id
   server.get('/blogger/:route', (req, res) => app.render(req, res, '/blogger', Object.assign({ route: req.params.route }, req.query)));
-
+  server.get('/blogger/:route/:id', (req, res) => app.render(req, res, '/blogger', Object.assign({ route: req.params.route, id: req.params.id }, req.query)));
+  
   // redirect from /post to /blogger or /post?id to /blogger/:id
 //   server.get('/post', (req, res) => {
 //     if (req.query.id) {

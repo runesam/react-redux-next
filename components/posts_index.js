@@ -1,40 +1,48 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Link from 'next/link';
+import Router from 'next/router';
 
-import { fetchPosts } from '../actions/index';
+import { fetchPosts, deletePost } from '../actions/index';
+
+import Loader from './loader';
 
 class PostsIndex extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            response: false
+            response: false,
+            noData: true,
+            loading: true
         };
     }
     componentWillMount() {
-        this.props.fetchPosts().then(() => this.setState({ response: true }));
+        this.props.fetchPosts().then(() => this.updateStates());
     }
-    renderLoader() {
-        if (!this.state.response) {
-            return (
-                <div className='loader loader1'>
-                    <div>
-                        <div>
-                            <div>
-                                <div>
-                                    <div>
-                                        <div />
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            );
+    componentWillReceiveProps(data) {
+        if (window.location.pathname !== '/blogger') {
+            return Router.push('/blogger');
+        }
+        if (data.posts.length > 0) {
+            return this.setState({ noData: false });
         }
     }
+    updateStates() {
+        this.setState({
+            loading: false
+        });
+    }
+    handleDeletePost(id) {
+        this.setState({ loading: true });          
+        this.props.deletePost(id).then(() => {
+            this.props.fetchPosts().then(() => this.updateStates());            
+        });
+    }
+    renderLoader() {
+        return this.state.loading ? <Loader /> : false; 
+    }
     renderPostsSection() {
-        if (this.state.response) {
+        if (!this.state.noData && !this.state.loading) {
             return (
                 <div>
                     <h3>Posts</h3>
@@ -44,17 +52,20 @@ class PostsIndex extends Component {
                 </div>
             );
         }
+        return this.state.response ? <h3>No Posts to show yet!. Give it a try and add a new one</h3> : false;
     }
     renderPosts() {
-        if (this.state.response) {
-            return this.props.posts.map(post => (
-                <li className='list-group-item' key={post.id}>
-                    <button className='btn btn-danger'>X</button>
-                    <span className='pull-xs-right'>{post.categories}</span>
-                    <strong>{post.title}</strong>
-                </li>
-            ));
-        }
+        return this.props.posts.map(post => (
+            <li className='list-group-item' key={post.id} >
+                <button className='btn btn-danger' onClick={this.handleDeletePost.bind(this, post.id)}>X</button>
+                <span className='pull-xs-right'>{post.categories}</span>
+                <Link prefetch href={{ pathname: '/blogger', query: { route: 'post', id: post.id } }} as={`/blogger/post/${post.id}`}>                
+                    <a>
+                        <strong>{post.title}</strong>
+                    </a>
+                </Link>
+            </li>
+        ));
     }
     render() {
         return (
@@ -75,4 +86,4 @@ function mapStateToProps(state) {
     return { posts: state.posts.all };
 }
 
-export default connect(mapStateToProps, { fetchPosts })(PostsIndex);
+export default connect(mapStateToProps, { fetchPosts, deletePost })(PostsIndex);
